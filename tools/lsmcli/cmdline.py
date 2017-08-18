@@ -1821,8 +1821,7 @@ class CmdLine(object):
                 try:
                     info_dict[key] = func_dict[key](disk_path)
                 except LsmError as lsm_err:
-                    if lsm_err.code != ErrorNumber.NO_SUPPORT:
-                        raise
+                    pass
 
             local_disks.append(
                 LocalDiskInfo(disk_path,
